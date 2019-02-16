@@ -1,7 +1,6 @@
 # This will download the log files to your local machine
 
-from urllib.request 
-import urlretrieve
+from urllib.request import urlretrieve
 
 print('Starting file download...')
 
