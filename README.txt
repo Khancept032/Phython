@@ -18,3 +18,6 @@ STEPS
 4. Finally, the logs should be broken into separate files by month. Your program should split the log file into 12 smaller files, where the data stored in each file are the log events for a single month. These should be written to disk in the same directory as your program file, in a logical and consistent manner. 
 
 Your program should be created and developed using GitHub (I will be examining the commit logs to see your work). When the project is due, you will Slack me your repository URL so I can clone the repo and test your program. The project is due date is to be determined.
+
+Abdul will be responsible for parts 1, 5 and 6.
+Chris will be responsible for parts 2, 3 and 4.
