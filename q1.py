@@ -6,5 +6,6 @@ def file_len(fname):
             pass
     return i + 1        
 
-print("Total Request:") 
-print(file_len("local_copy.log")) 
+total = (file_len("local_copy.log"))
+print("Total Request:", total) 
+
