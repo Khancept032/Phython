@@ -14,3 +14,5 @@ import re
     j = re.findall("Oct",str)
     k = re.findall("Nov",str)
     l = re.findall("Dec",str)
+
+# Use match on request
