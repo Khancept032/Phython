@@ -26,9 +26,9 @@ import re
 from datetime import date
     af = date()
     al = date()
-(al-af).days
+total days = (al-af).days
 
-totaldays = 353
+# Hard code totaldays = 353
 # Calculate results based on total requests
 day = total/totaldays
 week = day/7
