@@ -23,6 +23,11 @@ last = line
 
 import re
 
+from datetime import date
+    af = date()
+    al = date()
+(al-af).days
+
 totaldays = 353
 # Calculate results based on total requests
 day = total/totaldays
