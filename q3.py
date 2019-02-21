@@ -35,4 +35,5 @@ for a in range(len(lines)):
         continue  
 
 pc = (count400/len(lines)) * 100
-print ('Not successful requests 4xx:', round(pc, 2), 'percent') 
+print ('Not Successful Requests 4xx:', round(pc, 2), 'percent') 
+
