@@ -14,11 +14,13 @@
 
 # What percentage of the requests were not successful (any 4xx status code)?
 
+# opens file
 FILE_NAME = 'local_copy.log'  
 f = open('local_copy.log')
 lines = []
 count400 = 0
 
+# strip lines and count 4xx codes 
 for line in f:
     line = line.strip()
     lines.append(line)
@@ -31,7 +33,5 @@ for a in range(len(lines)):
     if results.startswith("4"):
         count400 += 1
         continue  
-   # else:
-       # continue  
 
 print ('Not successful requests 4xx:', (count400/len(lines)) * 100, 'percent') 
