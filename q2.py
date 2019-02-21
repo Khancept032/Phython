@@ -21,6 +21,8 @@ for line in fh:
     pass
 last = line
 
+import re
+
 totaldays = 353
 # Calculate results based on total requests
 day = total/totaldays
