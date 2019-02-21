@@ -21,10 +21,10 @@ for line in fh:
     pass
 last = line
 
-firstdate = re.search(r'(\d+/\d+/\d+/)',first)
-lastdate = re.search(r'(\d+/\d+/\d+/)',last)
-
 import re
+
+af = re.search(r'(\d+/\d+/\d+/)',first)
+al = re.search(r'(\d+/\d+/\d+/)',last)
 
 from datetime import date
     af = date()
