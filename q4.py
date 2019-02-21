@@ -33,4 +33,5 @@ for a in range(len(lines)):
         count300 += 1
         continue  
 
-print ('Redirected Requests 3xx:', (count300/len(lines)) * 100, 'percent') 
+ps = (count300/len(lines)) * 100
+print ('Redirected Requests 3xx:', round(ps, 2), 'percent') 
