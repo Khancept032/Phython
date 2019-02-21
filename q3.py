@@ -34,7 +34,5 @@ for a in range(len(lines)):
         count400 += 1
         continue  
 
-#print ('Not successful requests 4xx:', (count400/len(lines)) * 100, 'percent') 
-
 pc = (count400/len(lines)) * 100
 print ('Not successful requests 4xx:', round(pc, 2), 'percent') 
