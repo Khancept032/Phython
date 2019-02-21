@@ -12,6 +12,8 @@
 
 # File for question 2 solutions.
 # How many requests were made on each day? per week? per month?
+FILE_NAME = 'local_copy.log'  
+fh = open('local_copy.log')
 
 with open(local_copy.log, 'rb') as fh:
     first = next(fh).decode()
@@ -27,9 +29,9 @@ af = re.search(r'(\d+/\d+/\d+/)',first)
 al = re.search(r'(\d+/\d+/\d+/)',last)
 
 from datetime import date
-    af = date()
-    al = date()
-total days = (al-af).days
+af = date()
+al = date()
+totaldays = (al-af).days
 
 # Hard code totaldays = 353
 # Calculate results based on total requests
