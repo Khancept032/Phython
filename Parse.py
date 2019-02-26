@@ -9,11 +9,11 @@ LOCAL_FILE = 'local_copy.log'
 
 urlretrieve (URL_PATH, LOCAL_FILE )
 
-print('File has downloaded')
+print('File has downloaded.')
 print()
 print('Parsing Files...')
 
-#Question 1
+#Question 1, find total requests
 def file_len(fname):
     with open(fname) as l:
         for i, l in enumerate(l):
@@ -22,13 +22,11 @@ def file_len(fname):
 
 total = (file_len("local_copy.log"))
 print("Total Request:", total) 
-#Question 2
+#Question 2, average requests per day, week and month
 import datetime
 from datetime import date
 from datetime import timedelta
 import re
-#Test value
-total = 726736
 FILE_NAME = 'local_copy.log'  
 fh = open('local_copy.log')
 
@@ -238,3 +236,6 @@ elif pscount == min(files):
 
 elif htmlcount == min(files):
     print('html is least requested file:', min(files))
+
+print('Seperating into files by month...')
+print('Files have downloaded.')
