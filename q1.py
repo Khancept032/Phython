@@ -2,7 +2,7 @@
 
 def file_len(fname):
     with open(fname) as l:
-        for i, x in enumerate(l):
+        for i, l in enumerate(l):
             pass
     return i + 1        
 
