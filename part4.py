@@ -4,20 +4,24 @@ import re
 FILE_NAME = 'local_copy.log'  
 f = open('local_copy.log')
 
-regex = '(/[A-z]{3})'
-read_line = True
- 
-with open('local_copy.log', "r") as file:
-    match_list = []
-    if read_line == True:
-        for line in file:
-            for match in re.finditer(regex, line, re.S):
-                match_text = match.group()
-                match_list.append(match_text)
-                #print (match_text)
-    else:
-        data = f.read()
-        for match in re.finditer(regex, data, re.S):
-            match_text = match.group()
-            match_list.append(match_text)
-file.close()
+rx_dict = {
+    'January': re.compile(r.'January = (Jan)')
+    'February': re.compile(r.'February = (Feb)')
+    'March': re.compile(r.'March = (Mar)')
+    'April': re.compile(r.'April = (Apr)')
+    'May': re.compile(r.'May = (May)')
+    'June': re.compile(r.'June = (Jun)')
+    'July': re.compile(r.'July = (Jul)')
+    'August': re.compile(r.'August = (Aug)')
+    'September': re.compile(r.'September = (Sep)')
+    'OCtober': re.compile(r.'October = (Oct)')
+    'November': re.compile(r.'November = (Nov)')
+    'December': re.compile(r.'December = (Dec)')
+}
+
+def _parse_line('local_copy.log')
+    for key, rx in rx_dict.items()
+    match = rx.search('local_copy.log')
+    if match
+        return key, match
+return None, None
