@@ -10,6 +10,9 @@ LOCAL_FILE = 'local_copy.log'
 urlretrieve (URL_PATH, LOCAL_FILE )
 
 print('File has downloaded')
+print()
+print('Parsing Files...')
+
 #Question 1
 def file_len(fname):
     with open(fname) as l:
