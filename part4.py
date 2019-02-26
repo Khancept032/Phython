@@ -25,3 +25,31 @@ def _parse_line('local_copy.log')
     if match
         return key, match
 return None, None
+
+with open('local_copy.log', 'r') as file object:
+    line = file_object.readline()
+    while line:
+        key, match = _parse_line('local_copy.log')
+        if key == 'January'
+
+        if key == 'February'
+
+        if key == 'March'
+
+        if key == 'April'
+
+        if key == 'May'
+
+        if key == 'June'
+
+        if key == 'July'
+        
+        if key == 'August'
+
+        if key == 'September'
+
+        if key == 'October'
+
+        if key == 'November'
+
+        if key == 'December'      
