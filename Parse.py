@@ -10,4 +10,230 @@ LOCAL_FILE = 'local_copy.log'
 urlretrieve (URL_PATH, LOCAL_FILE )
 
 print('File has downloaded')
+#Question 1
+def file_len(fname):
+    with open(fname) as l:
+        for i, x in enumerate(l):
+            pass
+    return i + 1        
 
+total = (file_len("local_copy.log"))
+print("Total Request:", total) 
+#Question 2
+import datetime
+from datetime import date
+from datetime import timedelta
+import re
+#Test value
+total = 726736
+FILE_NAME = 'local_copy.log'  
+fh = open('local_copy.log')
+
+with open('local_copy.log', 'rb') as fh:
+    first = next(fh).decode()
+    fh.seek(-1024, 2)
+    last = fh.readlines()[-1].decode()
+first2 = re.search(r'\d{2}/\w{3}/\d{4}',first)
+last2 = re.search(r'\d{2}/\w{3}/\d{4}',last)
+first3 = (first2.group().replace('Oct','10'))
+last3 = (last2.group().replace('Oct','10'))
+first4 = datetime.datetime.strptime(first3, "%d/%m/%Y").strftime("%Y-%m-%d")
+last4 = datetime.datetime.strptime(last3, "%d/%m/%Y").strftime("%Y-%m-%d")
+datetimeFormat = '%Y-%m-%d'
+diff = datetime.datetime.strptime(last4, datetimeFormat)\
+    - datetime.datetime.strptime(first4, datetimeFormat)
+finaltime=diff.days
+finaltime2=int(finaltime) + 1
+print('Average Requests per Day:',int(round(total/finaltime2)))
+print('Average Requests per Week:',int(round(total/finaltime*0.14285714)))
+print('Average Requests per Month:',int(round(total/finaltime*0.032854884)))
+#Question 3
+FILE_NAME = 'local_copy.log'  
+f = open('local_copy.log')
+lines = []
+count400 = 0
+for line in f:
+    line = line.strip()
+    lines.append(line)
+
+for a in range(len(lines)):
+    try:
+        results = lines[a].split()[8]
+    except:
+        continue
+    if results.startswith("4"):
+        count400 += 1
+        continue
+
+pc = (count400/len(lines)) * 100
+print ('Not Successful Requests 4xx:', round(pc, 2), 'percent')
+#Question 4
+FILE_NAME = 'local_copy.log'  
+f= open('local_copy.log')
+lines = []
+count300 = 0
+
+# strip lines and count 3xx codes 
+for line in f:
+    line = line.strip()
+    lines.append(line)
+
+for a in range(len(lines)):
+    try:
+        results = lines[a].split()[8]
+    except:
+        continue
+    if results.startswith("3"):
+        count300 += 1
+        continue  
+
+ps = (count300/len(lines)) * 100
+print ('Redirected Requests 3xx:', round(ps, 2), 'percent')
+#Question 5
+FILE_NAME = 'local_copy.log'  
+f = open('local_copy.log')
+
+# each file is set to zero so it can be used to count after stripping
+gifcount = 0
+tiffcount = 0
+execount = 0
+txtcount = 0
+xbmcount = 0
+pscount = 0
+htmlcount = 0
+
+
+lines = []
+for line in f:
+       line = line.strip()
+       lines.append(line)
+
+# stripping for files
+for a in range (len(lines)):
+       try:
+              results = lines[a].split()[6]
+       except:
+              continue
+       if results.endswith('gif'):
+              gifcount += 1
+              continue
+       if results.endswith('tiff'):
+              tiffcount += 1
+              continue
+       if results.endswith('exe'):
+              execount += 1
+              continue
+       if results.endswith('txt'):
+              txtcount += 1
+              continue 
+       if results.endswith('xbm'):
+              xbmcount += 1
+              continue
+       if results.endswith('ps'):
+              pscount += 1
+              continue
+       if results.endswith('html'):
+              htmlcount += 1
+              continue
+       else:
+              continue     
+
+
+# below uses max to count the most frequent file
+files = (gifcount, tiffcount, execount, txtcount, xbmcount, pscount, htmlcount)
+
+if gifcount == max(files):
+    print('gif is most requested file:', max(files))
+
+elif tiffcount == max(files):
+    print('tiff is most requested file:', max(files))
+
+elif execount == max(files):
+    print('exe is most requested file:', max(files))
+
+elif txtcount == max(files):
+    print('txt is most requested file:', max(files))
+
+elif xbmcount == max(files):
+    print('xbm is most requested file:', max(files))
+
+elif pscount == max(files):
+    print('ps is most requested file:', max(files))
+
+elif htmlcount == max(files):
+    print('html is most requested file:', max(files))
+
+print() 
+#Question 6
+FILE_NAME = 'local_copy.log'  
+f = open('local_copy.log')
+
+# each file is set to zero so it can be used to count after stripping
+gifcount = 0
+tiffcount = 0
+execount = 0
+txtcount = 0
+xbmcount = 0
+pscount = 0
+htmlcount = 0
+
+
+lines = []
+for line in f:
+       line = line.strip()
+       lines.append(line)
+
+# stripping for files
+for a in range (len(lines)):
+       try:
+              results = lines[a].split()[6]
+       except:
+              continue
+       if results.endswith('gif'):
+              gifcount += 1
+              continue
+       if results.endswith('tiff'):
+              tiffcount += 1
+              continue
+       if results.endswith('exe'):
+              execount += 1
+              continue
+       if results.endswith('txt'):
+              txtcount += 1
+              continue 
+       if results.endswith('xbm'):
+              xbmcount += 1
+              continue
+       if results.endswith('ps'):
+              pscount += 1
+              continue
+       if results.endswith('html'):
+              htmlcount += 1
+              continue
+       else:
+              continue     
+
+# below uses min to count the most frequent file
+files = (gifcount, tiffcount, execount, txtcount, xbmcount, pscount, htmlcount)
+
+# below uses min to count least frequent file
+if gifcount == min(files):
+    print('gif is least requested file:', min(files))
+
+elif tiffcount == min(files):
+    print('tiff is least requested file:', min(files))
+
+elif execount == min(files):
+    print('exe is least requested file:', min(files))
+
+elif txtcount == min(files):
+    print('txt is least requested file:', min(files))
+
+elif xbmcount == min(files):
+    print('xbm is least requested file:', min(files))
+
+elif pscount == min(files):
+    print('ps is least requested file:', min(files))
+
+elif htmlcount == min(files):
+    print('html is least requested file:', min(files))

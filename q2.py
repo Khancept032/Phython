@@ -24,4 +24,4 @@ finaltime=diff.days
 finaltime2=int(finaltime) + 1
 print('Average Requests per Day:',int(round(total/finaltime2)))
 print('Average Requests per Week:',int(round(total/finaltime*0.14285714)))
-print('Average Requets per Month:',int(round(total/finaltime*0.032854884)))
+print('Average Requests per Month:',int(round(total/finaltime*0.032854884)))
