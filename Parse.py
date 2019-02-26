@@ -13,7 +13,7 @@ print('File has downloaded')
 #Question 1
 def file_len(fname):
     with open(fname) as l:
-        for i, x in enumerate(l):
+        for i, l in enumerate(l):
             pass
     return i + 1        
 
