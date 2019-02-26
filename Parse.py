@@ -162,8 +162,6 @@ elif pscount == max(files):
 
 elif htmlcount == max(files):
     print('html is most requested file:', max(files))
-
-print() 
 #Question 6
 FILE_NAME = 'local_copy.log'  
 f = open('local_copy.log')
