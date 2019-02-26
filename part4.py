@@ -3,7 +3,7 @@ import re
 
 FILE_NAME = 'local_copy.log'  
 f = open('local_copy.log')
-
+#Compile lines from log file to be seperated
 rx_dict = {
     'January': re.compile(r.'January = (Jan)')
     'February': re.compile(r.'February = (Feb)')
@@ -18,14 +18,14 @@ rx_dict = {
     'November': re.compile(r.'November = (Nov)')
     'December': re.compile(r.'December = (Dec)')
 }
-
+#Parse log file to search for values defined
 def _parse_line('local_copy.log')
     for key, rx in rx_dict.items()
     match = rx.search('local_copy.log')
     if match
         return key, match
 return None, None
-
+#Seperate log file into smaller files based on regex key
 with open('local_copy.log', 'r') as file object:
     line = file_object.readline()
     while line:
