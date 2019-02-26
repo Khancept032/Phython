@@ -14,7 +14,7 @@ with open('local_copy.log', "r") as file:
             for match in re.finditer(regex, line, re.S):
                 match_text = match.group()
                 match_list.append(match_text)
-                print (match_text)
+                #print (match_text)
     else:
         data = f.read()
         for match in re.finditer(regex, data, re.S):
