@@ -1,6 +1,5 @@
 Documention for Python-Parsing Project:
 
-<<<<<<< HEAD
 The goal of this project is to familiarize yourself with Python syntax, and some basic tasks that are common in systems programming and administration. The program will be invoked from the command line on a fresh Linux machine, so if you introduce any library dependencies beyond the Python Standard Library (not recommended), you must provide very clear instructions to recreate your environment. You should consider using vagrant or a GCP VM to develop in Linux if you are on a Windows machine. It is your responsibility to ensure the program runs as expected in the operational environment described. 
 
 STEPS
@@ -24,5 +23,3 @@ Abdul will be responsible for parts 1, 5 and 6.
 Chris will be responsible for parts 2, 3 and 4.
 
 The completed code downloads, parses and compiles in roughly ninety seconds.
-=======
->>>>>>> 88da05ade6ad6ff9271ecd7db3c6ff45c9445f81
