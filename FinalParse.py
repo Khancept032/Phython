@@ -3,10 +3,8 @@
 print('Starting file download...')
 
 from urllib.request import urlretrieve
-
 URL_PATH = 'https://s3.amazonaws.com/tcmg476/http_access_log'
 LOCAL_FILE = 'local_copy.log'
-
 urlretrieve (URL_PATH, LOCAL_FILE )
 
 print('File has downloaded.')
@@ -103,7 +101,6 @@ xbmcount = 0
 pscount = 0
 htmlcount = 0
 
-
 lines = []
 for line in f:
        line = line.strip()
@@ -139,7 +136,6 @@ for a in range (len(lines)):
        else:
               continue     
 
-
 # below uses max to count the most frequent file
 files = (gifcount, tiffcount, execount, txtcount, xbmcount, pscount, htmlcount)
 
@@ -148,25 +144,19 @@ if gifcount == max(files):
 
 elif tiffcount == max(files):
     print('tiff is most requested file:', max(files))
-
 elif execount == max(files):
     print('exe is most requested file:', max(files))
-
 elif txtcount == max(files):
     print('txt is most requested file:', max(files))
-
 elif xbmcount == max(files):
     print('xbm is most requested file:', max(files))
-
 elif pscount == max(files):
     print('ps is most requested file:', max(files))
-
 elif htmlcount == max(files):
     print('html is most requested file:', max(files))
-#Question 6
+#Determines least reuqested file
 FILE_NAME = 'local_copy.log'  
 f = open('local_copy.log')
-
 # each file is set to zero so it can be used to count after stripping
 gifcount = 0
 tiffcount = 0
@@ -176,12 +166,10 @@ xbmcount = 0
 pscount = 0
 htmlcount = 0
 
-
 lines = []
 for line in f:
        line = line.strip()
        lines.append(line)
-
 # stripping for files
 for a in range (len(lines)):
        try:
@@ -214,29 +202,21 @@ for a in range (len(lines)):
 
 # below uses min to count the most frequent file
 files = (gifcount, tiffcount, execount, txtcount, xbmcount, pscount, htmlcount)
-
 # below uses min to count least frequent file
 if gifcount == min(files):
     print('gif is least requested file:', min(files))
-
 elif tiffcount == min(files):
     print('tiff is least requested file:', min(files))
-
 elif execount == min(files):
     print('exe is least requested file:', min(files))
-
 elif txtcount == min(files):
     print('txt is least requested file:', min(files))
-
 elif xbmcount == min(files):
     print('xbm is least requested file:', min(files))
-
 elif pscount == min(files):
     print('ps is least requested file:', min(files))
-
 elif htmlcount == min(files):
     print('html is least requested file:', min(files))
-
 print()
 print('Seperating into files by month...')
 f = open('local_copy.log', 'r')

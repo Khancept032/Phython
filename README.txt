@@ -21,3 +21,5 @@ Your program should be created and developed using GitHub (I will be examining t
 
 Abdul will be responsible for parts 1, 5 and 6.
 Chris will be responsible for parts 2, 3 and 4.
+
+The completed code downloads, parses and compiles in roughly ninety seconds.
