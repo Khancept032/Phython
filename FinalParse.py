@@ -47,7 +47,7 @@ finaltime2=int(finaltime) + 1
 print('Average Requests per Day:',int(round(total/finaltime2)))
 print('Average Requests per Week:',int(round(total/finaltime*0.14285714)))
 print('Average Requests per Month:',int(round(total/finaltime*0.032854884)))
-#Question 3
+#Question 3, determine most 4xx errors
 FILE_NAME = 'local_copy.log'  
 f = open('local_copy.log',)
 lines = []
@@ -67,7 +67,7 @@ for a in range(len(lines)):
 
 pc = (count400/len(lines)) * 100
 print ('Not Successful Requests 4xx:', round(pc, 2), 'percent')
-#Question 4
+#Question 4, determine 3xx errors
 FILE_NAME = 'local_copy.log'  
 f= open('local_copy.log')
 lines = []
@@ -89,7 +89,7 @@ for a in range(len(lines)):
 
 ps = (count300/len(lines)) * 100
 print ('Redirected Requests 3xx:', round(ps, 2), 'percent')
-#Question 5
+#Question 5, determine most requested file
 FILE_NAME = 'local_copy.log'  
 f = open('local_copy.log')
 
@@ -155,7 +155,7 @@ elif pscount == max(files):
     print('ps is most requested file:', max(files))
 elif htmlcount == max(files):
     print('html is most requested file:', max(files))
-#Determines least reuqested file
+#Question 6, determines least reuqested file
 FILE_NAME = 'local_copy.log'  
 f = open('local_copy.log')
 # each file is set to zero so it can be used to count after stripping
@@ -219,6 +219,7 @@ elif pscount == min(files):
 elif htmlcount == min(files):
     print('html is least requested file:', min(files))
 print()
+#Seperate files by month
 print('Seperating into files by month...')
 f = open('local_copy.log', 'r')
 #Create seperate files by month
@@ -234,7 +235,7 @@ sep_log = open('sep_log.log', 'w+')
 oct_log = open('oct_log.log', 'w+')
 nov_log = open('nov_log.log', 'w+')
 dec_log = open('dec_log.log', 'w+')
-
+#Reads log file to determine date of request
 for line in f:
     if re.search((r'Jan'), line):
         jan_log.write(line)
